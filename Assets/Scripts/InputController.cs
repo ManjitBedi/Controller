@@ -20,6 +20,10 @@ public class InputController : MonoBehaviour
 
     public float moveSpeed;
 
+    public float xMin = -3.0f;
+
+    public float xMax = 3.0f;
+
     /// <summary>
     /// value read in from game pad
     /// </summary>
@@ -64,6 +68,31 @@ public class InputController : MonoBehaviour
     {
         if (direction.sqrMagnitude < 0.01)
             return;
+
+        // check if the direction being moved will go past the horizontal limits
+        float xPos = playerGameObject.transform.position.x;
+        float moveAmount = direction.x * moveSpeed;
+        // direction < 0 - left
+
+        if (direction.x < 0)
+        {
+            if (xPos + moveAmount < xMin)
+            {
+                Debug.Log("reached movement limit");
+                return;
+            }
+        }
+
+        // direction > 0 - right
+        if (direction.x > 0)
+        {
+            if (xPos + moveAmount > xMax)
+            {
+                Debug.Log("reached movement limit");
+                return;
+            }
+        }
+
         var scaledMoveSpeed = moveSpeed * Time.deltaTime;
         var move = Quaternion.Euler(0, playerGameObject.transform.eulerAngles.y, 0) * new Vector3(direction.x, 0, 0);
         playerGameObject.transform.position += move * scaledMoveSpeed;

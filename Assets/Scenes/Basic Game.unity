@@ -805,6 +805,8 @@ MonoBehaviour:
   movementText: {fileID: 1241356539}
   playerGameObject: {fileID: 1349656966}
   moveSpeed: 2.5
+  xMin: -6
+  xMax: 6
 --- !u!114 &1703222167
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -880,7 +882,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3754629335557987876, guid: db646197d61a74f0782bcfe516b719fd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -3.47
       objectReference: {fileID: 0}
     - target: {fileID: 3754629335557987876, guid: db646197d61a74f0782bcfe516b719fd, type: 3}
       propertyPath: m_LocalPosition.z
