@@ -72,25 +72,16 @@ public class InputController : MonoBehaviour
         // check if the direction being moved will go past the horizontal limits
         float xPos = playerGameObject.transform.position.x;
         float moveAmount = direction.x * moveSpeed;
-        // direction < 0 - left
+        
 
-        if (direction.x < 0)
+        if (direction.x < 0 && (xPos + moveAmount < xMin)) // direction < 0 - left
         {
-            if (xPos + moveAmount < xMin)
-            {
-                Debug.Log("reached movement limit");
-                return;
-            }
+            return;
         }
-
-        // direction > 0 - right
-        if (direction.x > 0)
+        
+        if (direction.x > 0 && (xPos + moveAmount > xMax)) // direction > 0 - right
         {
-            if (xPos + moveAmount > xMax)
-            {
-                Debug.Log("reached movement limit");
-                return;
-            }
+            return;
         }
 
         var scaledMoveSpeed = moveSpeed * Time.deltaTime;
