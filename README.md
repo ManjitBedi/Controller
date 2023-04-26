@@ -1,5 +1,7 @@
 # Controller - playground for using controllers with Unity
 
+Note: there are bugs in the code - to be fixed!
+
 I am using the project to try out working with controllers with Unity; so far all of the projects that I have worked on used touches on mobile devices or mouse input & keyboard input on desktops.  
 
 Now it is time to try out using controllers.
