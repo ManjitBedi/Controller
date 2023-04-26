@@ -90,6 +90,11 @@ public class InputController : MonoBehaviour
     }
 
 
+    /// <summary>
+    /// This gets invoked when movement keys or a gamepad is used.
+    /// The movement keys are currently mapped to WASD.
+    /// </summary>
+    /// <param name="direction"></param>
     private void Move(Vector2 direction)
     {
         if (direction.sqrMagnitude < 0.01)
