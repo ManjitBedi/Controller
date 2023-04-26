@@ -33,7 +33,6 @@ public class ObjectSpawner : MonoBehaviour
         
     }
 
-
     void SpawnObjects()
     {
         objects = new GameObject[maxObjects];
@@ -49,6 +48,7 @@ public class ObjectSpawner : MonoBehaviour
         }
 
         // animate the first object
+        // when the animation completes, another object is animated this keep repeating.
         objects[index].transform.DOMove(new Vector3(objects[index].transform.position.x, -10, 0), 3)
             .onComplete = NextObject;
  
@@ -56,7 +56,7 @@ public class ObjectSpawner : MonoBehaviour
 
     void NextObject()
     {
-        if (index < maxObjects)
+        if (index < maxObjects - 1)
         {
             index++;
         }
