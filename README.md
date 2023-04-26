@@ -22,10 +22,10 @@ public void OnMove(InputAction.CallbackContext context)
 
 ## Collision detection
 
-- the simple mechanic of the game level is to register a hit of a falling object with the player object.
-- this requires the falling objects to be with the 'is trigger' property to true
+- the simple mechanic of the game level is to register a hit of a falling object with the player game object.
+- this requires the falling objects to have the 'is trigger' property set to true
 - also for collisions to register the player and dropping game objects need colliders & rigid body components
-
+- the 'is kinematic' property is true on the player game object in the scene
 
 ## Assets in use
 
