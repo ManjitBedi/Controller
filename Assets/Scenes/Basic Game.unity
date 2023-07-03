@@ -891,6 +891,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Background Quad
       objectReference: {fileID: 0}
+    - target: {fileID: 9204506963701531502, guid: 8ad21aa677bd841fa9025adf82d67aec, type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
