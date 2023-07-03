@@ -19,5 +19,9 @@ public class Player : MonoBehaviour
             score += 10;
             scoreText.text = $"Score: {score.ToString("D5")}";
         }
+        else
+        {
+            Debug.Log("collsion with game object ignored");
+        }
     }
 }

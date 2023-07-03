@@ -41,8 +41,10 @@ public class ObjectSpawner : MonoBehaviour
             float xPos = Random.Range(-3.0f, 3.0f);
             Vector3 position = new Vector3(xPos, 10.0f, 0);
 
+            // select a object randomly from the array.
             int type = Random.Range(0, prefabs.Length);
-            objects[i] = Instantiate(prefabs[type], position, Quaternion.identity);
+            var rotation = prefabs[type].transform.rotation;
+            objects[i] = Instantiate(prefabs[type], position, rotation);
         }
 
         // animate the first object

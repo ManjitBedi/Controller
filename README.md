@@ -30,6 +30,7 @@ The movement callback is associated with a PlayerInput instance in the game scen
 - this requires the falling objects to have the 'is trigger' property set to true
 - also for collisions to register the player and dropping game objects need colliders & rigid body components
 - the 'is kinematic' property is true on the player game object in the scene
+- the score is updated if the tag of the object collided with is "Spawned"
 
 ## Assets in use
 
