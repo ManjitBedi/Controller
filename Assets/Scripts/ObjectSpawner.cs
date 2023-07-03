@@ -51,7 +51,6 @@ public class ObjectSpawner : MonoBehaviour
         // when the animation completes, another object is animated this keep repeating.
         objects[index].transform.DOMove(new Vector3(objects[index].transform.position.x, -10, 0), 3)
             .onComplete = NextObject;
- 
     }
 
     void NextObject()

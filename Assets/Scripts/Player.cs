@@ -11,6 +11,7 @@ public class Player : MonoBehaviour
     int score = 0;
 
     // Detect collisions between the GameObjects with Colliders attached
+    // TODO: change this to an OnTrigger?
     void OnCollisionEnter(Collision collision)
     {
         // Check for a match with the specific tag on any GameObject that collides with your GameObject
