@@ -42,13 +42,6 @@ public class InputController : MonoBehaviour
         }
     }
 
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
     #region Game Update
 
     // Update is called once per frame
@@ -110,6 +103,11 @@ public class InputController : MonoBehaviour
 
     #region Input
 
+    /// <summary>
+    /// This gets configured in the scene in the PlayerInput class in the gameplay
+    /// callback events.
+    /// </summary>
+    /// <param name="context"></param>
     public void OnMove(InputAction.CallbackContext context)
     {
         // read the value for the "move" action each event call

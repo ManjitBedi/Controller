@@ -29,8 +29,6 @@ public class ObjectSpawner : MonoBehaviour
     void Update()
     {
         GameObject currentObject = objects[index];
-
-        
     }
 
     void SpawnObjects()
@@ -72,5 +70,4 @@ public class ObjectSpawner : MonoBehaviour
         objects[index].transform.DOMove(new Vector3(objects[index].transform.position.x, -10, 0), 3)
             .onComplete = NextObject;
     }
-
 }

@@ -22,6 +22,8 @@ public void OnMove(InputAction.CallbackContext context)
 }
 ```
 
+The movement callback is associated with a PlayerInput instance in the game scene under "Events" -> "gamePlay".
+
 ## Collision detection
 
 - the simple mechanic of the game level is to register a hit of a falling object with the player game object.
