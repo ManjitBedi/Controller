@@ -20,9 +20,16 @@ public class Player : MonoBehaviour
             score += 10;
             scoreText.text = $"Score: {score.ToString("D5")}";
         }
-        else
+    }
+
+    //Upon collision with another GameObject, this GameObject will reverse direction
+    private void OnTriggerEnter(Collider other)
+    {
+        // Check for a match with the specific tag on any GameObject that collides with your GameObject
+        if (other.gameObject.tag == "Spawned")
         {
-            Debug.Log("collsion with game object ignored");
+            score += 10;
+            scoreText.text = $"Score: {score.ToString("D5")}";
         }
     }
 }
