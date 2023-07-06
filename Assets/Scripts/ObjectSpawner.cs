@@ -67,6 +67,7 @@ public class ObjectSpawner : MonoBehaviour
         // animate the first object
         float xPos = Random.Range(-3.0f, 3.0f);
         Vector3 position = new Vector3(xPos, 10.0f, 0);
+        objects[index].SetActive(true);
         objects[index].transform.position = position;
         objects[index].transform.DOMove(new Vector3(objects[index].transform.position.x, -10, 0), 3)
             .onComplete = NextObject;
