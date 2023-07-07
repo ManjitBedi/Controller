@@ -2,11 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.VFX;
 
 public class Player : MonoBehaviour
 {
     [SerializeField]
     TMP_Text scoreText;
+
+    [SerializeField]
+    VisualEffect poofVFX;
 
     int score = 0;
 
@@ -29,5 +33,10 @@ public class Player : MonoBehaviour
     private void StartConsumeItemSequence(GameObject go)
     {
         go.SetActive(false);
+        if (poofVFX != null)
+        {
+            poofVFX.enabled= true;
+            poofVFX.Play();
+        }
     }
 }
