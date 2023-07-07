@@ -27,10 +27,26 @@ The movement callback is associated with a PlayerInput instance in the game scen
 ## Collision detection
 
 - the simple mechanic of the game level is to register a hit of a falling object with the player game object.
-- this requires the falling objects to have the 'is trigger' property set to true
+- this requires the falling objects to have the 'is trigger' property set to true; we don't need to use physics with the objects bouncing off of each other
 - also for collisions to register the player and dropping game objects need colliders & rigid body components
-- the 'is kinematic' property is true on the player game object in the scene
 - the score is updated if the tag of the object collided with is "Spawned"
+
+```
+/// <summary>
+/// Upon collision with another game object, increase the score.
+/// </summary>
+/// <param name="other"></param>
+private void OnTriggerEnter(Collider other)
+{
+	// Check for a match with the specific tag on any GameObject that collides with your GameObject
+	if (other.gameObject.tag == "Spawned")
+	{
+		score += 10;
+		scoreText.text = $"Score: {score.ToString("D5")}";
+		StartConsumeItemSequence(other.gameObject);
+	}
+}
+```
 
 ## Assets in use
 
